@@ -1,4 +1,5 @@
 import 'package:calculator_app/pages/add.dart';
+import 'package:calculator_app/pages/subtract.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -41,14 +42,18 @@ class HomePAge extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 50,
-            width: 400,
-            child: ElevatedButton(
+            SizedBox(height: 20,),
+            SizedBox(
+              height: 50,
+              width: 400,
+              child: ElevatedButton(
               style:
                 ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurpleAccent,
                 ),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> SubtractPage()));
+              },
               child: Text(
                 "SUBTRACT",
                 style: TextStyle(
@@ -67,7 +72,9 @@ class HomePAge extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.deepPurpleAccent
                 ),
-                onPressed: (){} ,
+                onPressed: (){
+
+                } ,
                 child: Text(
                   "PRODUCT",
                   style: TextStyle(
@@ -78,6 +85,7 @@ class HomePAge extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
             SizedBox(
               height: 50,
               width: 400,
